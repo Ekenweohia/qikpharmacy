@@ -1,0 +1,10 @@
+
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # invalid_assignment: false
+    # no_runtimeType_toString: false
+    # sort_pub_dependencies: false
+    # require_trailing_commas: false
+    # close_sinks: true

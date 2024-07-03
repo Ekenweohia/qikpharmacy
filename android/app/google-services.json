@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "126073830457",
+    "project_id": "qikpharma-4de98",
+    "storage_bucket": "qikpharma-4de98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126073830457:android:00dc5308762c71d6fa21e8",
+        "android_client_info": {
+          "package_name": "com.ecrts.qik_pharma_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126073830457-bhf9a45rk1o2b8n84erjke2o0pakudpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlNoucJ8FhhPwbvIUutO3675I0_50eDrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126073830457-bhf9a45rk1o2b8n84erjke2o0pakudpp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
