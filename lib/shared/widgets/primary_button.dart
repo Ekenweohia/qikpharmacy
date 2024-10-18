@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:qik_pharma_mobile/shared/widgets/circular_loading_widget.dart';
-
 import 'package:qik_pharma_mobile/utils/utils.dart';
 
 class PrimaryButton extends StatelessWidget {
@@ -34,7 +33,7 @@ class PrimaryButton extends StatelessWidget {
       height: 50,
       child: ElevatedButton(
         style: ButtonStyle(
-          shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               side: BorderSide(
                 color: hasBorder ? borderColor! : Colors.transparent,
@@ -42,23 +41,15 @@ class PrimaryButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(56),
             ),
           ),
-          backgroundColor: WidgetStateProperty.all<Color>(
-            !isEnabled
-                ? Colors.grey
-                : hasBorder
-                    ? Colors.white
-                    : buttonColor,
+          backgroundColor: MaterialStateProperty.resolveWith<Color>(
+            (Set<MaterialState> states) {
+              if (!isEnabled) return Colors.grey;
+              if (hasBorder) return Colors.white;
+              return buttonColor;
+            },
           ),
         ),
-        onPressed: () {
-          FocusScopeNode currentFocus = FocusScope.of(context);
-
-          if (!currentFocus.hasPrimaryFocus) {
-            currentFocus.unfocus();
-          }
-
-          onPressed!();
-        },
+        onPressed: isEnabled ? onPressed : null,
         child: loading
             ? CircularLoadingWidget(
                 color: textColor ?? Colors.white,
